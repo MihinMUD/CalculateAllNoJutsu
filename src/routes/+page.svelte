@@ -20,11 +20,17 @@
     <form class="form">
         <input class="input" bind:value={prob} type="text" placeholder="Your Math Problem" />
         <input class="btn" type="submit" on:click={calc} value="Calculate!" />
-        <p>Ans: {ans}</p>
+        <p class="ans">Ans: {ans}</p>
     </form>
 </div>
 
 <style>
+    .ans {
+        text-align: left;
+        max-height: 50vh;
+        word-break: break-all;
+        overflow-y: auto;
+    }
     h1 {
         background: -webkit-linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
         background-clip: content-box;
@@ -42,7 +48,6 @@
         gap: 5vh;
     }
     .input {
-        width: 50vw;
         color: rgb(30, 30, 30);
     }
     input {
@@ -66,6 +71,7 @@
     }
 
     .form {
+        width: 50vw;
         display: flex;
         flex-direction: column;
         align-items: stretch;
